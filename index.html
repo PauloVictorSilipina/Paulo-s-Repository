@@ -37,8 +37,28 @@
             font-size: medium;
         }
         </style>
+        <script>
+            let tamanho = 2;
+            function attTamanho() {
+                const h1 = document.querySelector("h1");
+                h1.style.fontSize = `${tamanho}em`;
+            }
+            function aumenta() {
+                tamanho += 0.25;
+                attTamanho()
+            }
+            function diminui() {
+                if (tamanho > 0) {
+                    tamanho -=0.25;
+                    attTamanho();
+                }
+
+            }
+        </script>
     </head>
     <body>
+        <button onclick="aumenta()">+</button>
+        <button onclick="diminui()">-</button>
        <h1>Paulo Victor Alves Rodrigues</h1>
        <picture>
            <source media="(max-width: 400px)"
